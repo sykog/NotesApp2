@@ -2,7 +2,9 @@ package notesapp
 
 import grails.validation.ValidationException
 import static org.springframework.http.HttpStatus.*
+import grails.transaction.Transactional
 
+@Transactional
 class NotesController {
 
     NoteService noteService
