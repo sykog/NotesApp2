@@ -35,6 +35,11 @@ ext {
 assets {
     minifyJs = true
     minifyCss = true
+
+    minifyOptions = [
+            languageMode: 'ES6',
+            targetLanguage: 'ES6'
+    ]
 }
 
 repositories {
