@@ -1,0 +1,195 @@
+/* Main Styles */
+
+html {
+    background-color: #ddd;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+html * {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding-top: 80px;
+    background-color: #44494b;
+    color: #f7f9fa;
+    overflow-x: hidden; /* prevents box-shadow causing a horizontal scrollbar in firefox when viewport < 960px wide */
+    background-color: #44494b;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #44494b), color-stop(1, #5c6265));
+    background-image: linear-gradient(to bottom, #44494b, #5c6265);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr = '#44494b', EndColorStr = '#5c6265');
+    background-repeat: no-repeat;
+    height: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body, select {
+    font-family: "Arial Black", sans-serif;
+}
+
+/* Navbar Styles */
+
+div.navbar {
+    height: 70px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    display: flex;
+    box-sizing: border-box;
+    background-color: #373737;
+    border-bottom: 2px solid #b1e4ea;
+}
+
+div.navbar-header {
+    background-color: black;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 0px 4px;
+}
+
+div.navbar-header.add-note {
+    border-radius: 25px;
+}
+
+a.navbar-brand {
+    font-size: .8em;
+    color: white;
+    margin: 4px auto;
+    padding: 4px 10px;
+    background: linear-gradient(#395cab, #223768);
+    border: 2px solid rgba(126, 188, 234, .6);
+    border-radius: 2px;
+}
+
+a.navbar-brand:hover {
+    background: linear-gradient(#3d76c9, #255286);
+}
+
+a.navbar-brand.selected {
+    background: linear-gradient(#583aab, #342266);
+    border: 2px solid rgba(209, 157, 234, 0.6);
+}
+
+a.navbar-brand.add-note {
+    color: #373737;
+    background: linear-gradient(#20d900, #009913);
+    border: 2px solid rgba(45, 211, 0, 0.6);
+    border-radius: 20px;
+    padding: 4px 10px;
+}
+
+a.navbar-brand.add-note:hover {
+    background: linear-gradient(#24f100, #00b016);
+}
+
+@media (max-width: 610px) {
+    a.navbar-brand {
+        padding: 4px 4px;
+    }
+}
+
+@media (max-width: 528px) {
+    body {
+        padding-top: 110px;
+    }
+
+    div.navbar-default {
+        height: 100px;
+    }
+
+    div.navbar-header {
+        margin: 0px auto;
+    }
+}
+
+@media (max-width: 435px) {
+    div.navbar-default {
+        padding: 0;
+    }
+
+    a.navbar-brand {
+        font-size: .6em;
+    }
+}
+
+/* Form Styles */
+
+input, select, textarea {
+    font-family: "Verdana", sans-serif;
+    margin: 6px 10px;
+    background-color: #c6e5ea;
+    border: 2px solid black;
+    border-radius: 4px;
+    padding: 4px 10px;
+}
+
+textarea, input {
+    width: calc(100% - 20px);
+    max-width: 1000px;
+    overflow: auto; /* IE always renders vertical scrollbar without this */
+    vertical-align: top;
+}
+
+select option {
+    background-color: #373737;
+}
+
+textarea:focus, input:focus {
+    border: 2px solid white;
+    outline: none;
+}
+
+input#create, input#update, select {
+    font-family: "Arial Black", sans-serif;
+    display: block;
+    color: white;
+    width: max-content;
+    margin: 10px 14px;
+    padding: 4px 10px;
+    background: linear-gradient(#395cab, #223768);
+    border: 2px solid rgba(126, 188, 234, .6);
+    border-radius: 4px;
+    box-shadow: 0 0 0 4px black;
+}
+
+input#create:hover, input#update:hover, select:hover {
+    background: linear-gradient(#3d76c9, #255286);
+    cursor: pointer;
+}
+
+/* Messages and errors */
+
+.errors,
+.message {
+    font-size: 0.8em;
+    line-height: 2;
+    margin: 1em 2em;
+    padding: 0.25em;
+}
+
+.message {
+    background: #f3f3ff;
+    border: 1px solid #b2d1ff;
+    color: #006dba;
+    -moz-box-shadow: 0 0 0.25em #b2d1ff;
+    -webkit-box-shadow: 0 0 0.25em #b2d1ff;
+    box-shadow: 0 0 0.25em #b2d1ff;
+}
+
+.errors {
+    background: #fff3f3;
+    border: 1px solid #ffaaaa;
+    color: #cc0000;
+    -moz-box-shadow: 0 0 0.25em #ff8888;
+    -webkit-box-shadow: 0 0 0.25em #ff8888;
+    box-shadow: 0 0 0.25em #ff8888;
+}
+
+.errors ul,
+.message {
+    padding: 0;
+}

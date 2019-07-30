@@ -1,0 +1,58 @@
+div.container {
+    max-width: 800px;
+}
+
+div.container > div {
+    margin: 12px 0px;
+    padding: 6px 10px;
+    border: 2px solid #b1e4ea;
+    box-shadow: 0 0 2px 2px black;
+    border-radius: 12px;
+    box-sizing: border-box;
+}
+
+p {
+    font-family: "Verdana", sans-serif;
+}
+
+p.time {
+    margin-bottom: 12px;
+}
+
+.note p.content, .codeblock p.additional, .quote p.additional, .todo p.complete {
+    display: inline;
+}
+
+a {
+    color: #00c2e2;
+}
+
+a:hover {
+    color: #c6e5ea;
+    text-decoration: none;
+}
+
+a.edit, a.delete {
+    display: inline;
+    float: right;
+    margin: 0px 8px;
+}
+
+a.delete {
+    color: red;
+}
+
+a.delete:hover {
+    color: #ff4949;
+}
+
+.quote p.content {
+    font-style: italic;
+}
+
+.codeblock p.content {
+    background-color: #b1e4ea;
+    color: black;
+    font-family: monospace;
+    padding: 4px;
+}
