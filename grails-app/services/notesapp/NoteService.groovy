@@ -1,6 +1,6 @@
 package notesapp
 
-import grails.gorm.transactions.Transactional
+import grails.transaction.Transactional
 
 @Transactional
 class NoteService {
